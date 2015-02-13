@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Directives Example</title>
+    <link rel="stylesheet" href="directives/multicheckbox/multicheckbox.css">
+    <link rel="stylesheet" href="directives/colorselect/colorselect.css">
+    <link rel="stylesheet" href="directives/itemselect/itemselect.css">
+</head>
+<body ng-app="app">
+
+<div ng-controller="AppCtrl as ctrl">
+
+    <div>
+        <label>
+            Title:
+            <input type="text" ng-model="ctrl.title"/>
+        </label>
+
+        <label>
+            Size of selected items list:
+            <input type="number" ng-model="ctrl.selectedList"/>
+        </label>
+
+        <label>
+            Search:
+            <input type="checkbox" ng-model="ctrl.search"/>
+        </label>
+    </div>
+
+    <hr>
+
+    <multicheckbox possible-values="ctrl.possibleValues" model="ctrl.selectedItems" data-title="{{ ctrl.title }}" selected-size="ctrl.selectedList" search="ctrl.search"></multicheckbox>
+
+    <hr>
+
+    <colorselect possible-values="ctrl.possibleValues1" model="ctrl.selectedItems"></colorselect>
+
+    <itemselect possible-values="ctrl.possibleValues2" model="ctrl.selectedItems"></itemselect>
+
+    <itemselect possible-values="ctrl.possibleValues3" model="ctrl.selectedItems"></itemselect>
+
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+<script src="directives/multicheckbox/multicheckbox.js"></script>
+<script src="directives/colorselect/colorselect.js"></script>
+<script src="directives/itemselect/itemselect.js"></script>
+</body>
+</html>

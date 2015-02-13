@@ -1,0 +1,7 @@
+<div class="itemselect">
+    <ul>
+        <li ng-repeat="item in localPossibleValues" ng-click="selectItem(item)" ng-class="{active: isSelected(item)}">
+            <span class="title">{{ item.name }}</span>
+        </li>
+    </ul>
+</div>

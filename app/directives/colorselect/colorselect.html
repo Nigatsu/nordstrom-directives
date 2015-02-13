@@ -1,0 +1,7 @@
+<div class="colorselect">
+    <ul>
+        <li ng-repeat="item in localPossibleValues" ng-click="selectColor(item)" ng-class="{active: isSelected(item)}">
+            <span class="block" ng-style="{'background-color':item.color}"></span>
+        </li>
+    </ul>
+</div>

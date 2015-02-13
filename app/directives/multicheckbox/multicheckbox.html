@@ -1,0 +1,38 @@
+<div class="multicheckbox">
+    <div class="header">
+        <div class="title">
+            <span>{{ title }}</span>
+            <span class="caret"></span>
+        </div>
+
+        <div class="dropdown">
+            <ul class="viewall">
+                <li>
+                    <label>
+                        <input type="checkbox" ng-model="selectedAll" ng-change="selectAll()">View all
+                    </label>
+                </li>
+            </ul>
+
+            <div ng-if="showSearch()">
+                <label for="search" class="hidden">Search</label>
+                <input id="search" class="search" type="text" ng-model="filter.name" placeholder="Search"/>
+            </div>
+
+            <ul class="options">
+                <li ng-repeat="item in localPossibleValues | filter:filter">
+                    <label>
+                        <input type="checkbox" ng-model="item.selected" ng-change="toggleItem(item)">{{ item.name }}
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="chosen" ng-if="showSelected()">
+        <li ng-repeat="item in localSelectedItems | limitTo:-selectedSize">
+            <span>{{ item.name }}</span>
+            <span class="clear" ng-click="toggleItem(item)">x</span>
+        </li>
+    </ul>
+</div>
