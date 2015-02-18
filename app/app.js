@@ -129,7 +129,11 @@
             { name: 'Whiteners & Brighteners' }
         ];
 
+        ctrl.title2 = 'Add custom text';
+
         ctrl.selectedItems = [];
+
+        ctrl.customText = '';
 
     });
 

@@ -74,7 +74,7 @@
                         }
                     });
 
-                    $scope.localSelectedItems = [];
+                    $scope.localSelectedItems.length = 0;
                 };
 
                 $scope.unselectAll = function ()
@@ -93,7 +93,7 @@
                     return $scope.possibleValues;
                 }, function ()
                 {
-                    $scope.localPossibleValues = [];
+                    $scope.localPossibleValues.length = 0;
 
                     angular.forEach($scope.possibleValues, function (item)
                     {

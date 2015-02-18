@@ -1,6 +1,7 @@
 .multicheckbox {
     display: inline-block;
     vertical-align: top;
+    margin: 5px 0;
 }
 
 .multicheckbox .hidden {
@@ -133,4 +134,8 @@
 
 .multicheckbox .chosen .clear:hover {
     color: #f00;
+}
+
+.multicheckbox .chosen .clear:before {
+    content: "x";
 }

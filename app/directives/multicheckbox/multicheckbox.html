@@ -32,7 +32,7 @@
     <ul class="chosen" ng-if="showSelected()">
         <li ng-repeat="item in localSelectedItems | limitTo:-selectedSize">
             <span>{{ item.name }}</span>
-            <span class="clear" ng-click="toggleItem(item)">x</span>
+            <span class="clear" ng-click="toggleItem(item)"></span>
         </li>
     </ul>
 </div>

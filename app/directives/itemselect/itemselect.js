@@ -45,14 +45,14 @@
                     return $scope.possibleValues;
                 }, function ()
                 {
-                    $scope.localPossibleValues = [];
+                    $scope.localPossibleValues.length = 0;
 
                     angular.forEach($scope.possibleValues, function (item)
                     {
                         $scope.localPossibleValues.push({name: item.name || item, item: item});
                     });
 
-                    if (1 === $scope.localPossibleValues.length){
+                    if (1 === $scope.localPossibleValues.length) {
                         $scope.localSelectedItem = $scope.localPossibleValues[0];
                         $scope.selectedItems.push($scope.localPossibleValues[0].item);
                     }

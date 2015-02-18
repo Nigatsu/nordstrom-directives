@@ -1,0 +1,47 @@
+.textselect {
+    display: block;
+    vertical-align: top;
+    margin: 5px 0;
+}
+
+.textselect a {
+    display: inline-block;
+    padding-top: 7px;
+    cursor: pointer;
+    color: #3b88c8;
+}
+
+.textselect a:before {
+    content: "+ ";
+}
+
+.textselect a:hover {
+    text-decoration: underline;
+}
+
+.textselect label {
+    position: absolute;
+}
+
+.textselect input {
+    display: block;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.textselect .close {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin: 1px 5px;
+}
+
+.textselect .close:before {
+    content: "x";
+}

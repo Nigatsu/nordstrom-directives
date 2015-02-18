@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="directives/multicheckbox/multicheckbox.css">
     <link rel="stylesheet" href="directives/colorselect/colorselect.css">
     <link rel="stylesheet" href="directives/itemselect/itemselect.css">
+    <link rel="stylesheet" href="directives/textselect/textselect.css">
 </head>
 <body ng-app="app">
 
@@ -27,8 +28,6 @@
         </label>
     </div>
 
-    <hr>
-
     <multicheckbox possible-values="ctrl.possibleValues" model="ctrl.selectedItems" data-title="{{ ctrl.title }}" selected-size="ctrl.selectedList" search="ctrl.search"></multicheckbox>
 
     <hr>
@@ -39,6 +38,17 @@
 
     <itemselect possible-values="ctrl.possibleValues3" model="ctrl.selectedItems"></itemselect>
 
+    <hr>
+
+    <div>
+        <label>
+            Title:
+            <input type="text" ng-model="ctrl.title2"/>
+        </label>
+    </div>
+
+    <textselect data-title="{{ ctrl.title2 }}" model="ctrl.customText"></textselect>
+
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
@@ -46,5 +56,6 @@
 <script src="directives/multicheckbox/multicheckbox.js"></script>
 <script src="directives/colorselect/colorselect.js"></script>
 <script src="directives/itemselect/itemselect.js"></script>
+<script src="directives/textselect/textselect.js"></script>
 </body>
 </html>
