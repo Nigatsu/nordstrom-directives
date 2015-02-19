@@ -20,7 +20,8 @@
 }
 
 .textselect label {
-    position: absolute;
+    position: relative;
+    display: inline-block;
 }
 
 .textselect input {

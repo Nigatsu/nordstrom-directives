@@ -133,7 +133,7 @@
 
         ctrl.selectedItems = [];
 
-        ctrl.customText = '';
+        ctrl.customText = null;
 
     });
 

@@ -19,6 +19,10 @@
                 $scope.toggleInput = function ()
                 {
                     $scope.isEnter = !$scope.isEnter;
+
+                    if(!$scope.isEnter) {
+                        $scope.inputText.text = null;
+                    }
                 };
 
                 $scope.$watch(function ()
